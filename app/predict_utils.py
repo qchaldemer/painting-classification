@@ -10,6 +10,9 @@ from torch import optim
 import torch.nn.functional as F
 from torchvision import datasets, transforms, models
 
+# device agnostic code
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+
 def process_image(image_path):
     ''' 
     Scales, crops, and normalizes a PIL image for a PyTorch model,
@@ -90,7 +93,7 @@ def load_checkpoint(filepath):
                    hidden_units)
     model.load_state_dict(checkpoint['state_dict'])
     
-    return model, learning_rate, hidden_units
+    return model, learning_rate, hidden_units, class_to_idx
 
 def predict(image_path, model, topk=5):
     ''' Predict the class (or classes) of an image using a trained deep learning model.
