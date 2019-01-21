@@ -20,8 +20,18 @@
     - variance: added more training data and early stopping
 
 ## 3. File Descriptions
+- painting_classifier.ipynb: jupyter notebook containing the training, prediction, error analysis of the DL model
+
+- checkpoint5.pth: the saved version of the model (download it here: and save it in the same folder as the app/)
+
+- app/: contains the python script for an application in the terminal that predicts the painting style of a painting
 
 ## 4. How to Interact with your project
+
+- Upload an image in app/example for e.g. 100152.jpg
+- Basic usage: python predict.py --image example/100152.jpg
+- Options:
+    - Return top 5 most likely classes: python predict.py --image example/100152.jpg --top_k 5 
 
 ## 5. Installations
 
