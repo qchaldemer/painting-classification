@@ -1,3 +1,5 @@
+Medium post: https://medium.com/@qchalvon/deep-learning-for-painting-style-classification-26d2c23a1fb9
+
 ## 1. Project Motivation
 - I am very interested in painting and I have always been wondering whether art experts were using only the painting to determine the style of the art piece or additional information such as the date, the name of the painter and so on.
 - To understand it, I have trained a neural network using only the paintings to classify paitings among the following categories: 
